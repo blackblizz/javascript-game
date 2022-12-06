@@ -1,0 +1,40 @@
+body {
+    color: #fff;
+    background: hsl(227, 10%, 10%);
+    font: 300 1em 'Fira Sans', sans-serif;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.button-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 20vh;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(2, 200px);
+    padding: 5px;
+    min-height: 80vh;
+}
+
+.button-grid > button{
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.button-grid > button:active {
+  animation: pulse 1500ms;
+  opacity: 0.1;
+}
+
+@keyframes button {
+  0% {
+    box-shadow: 0 0 0 0px rgba(186, 182, 182, 0.551);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}
