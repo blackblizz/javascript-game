@@ -24,24 +24,28 @@ body {
   border-radius: 5px;
 }
 
-.button-grid > button:active {
-  -webkit-animation: pulse 1500ms;
-          animation: pulse 1500ms;
-  opacity: 0.1;
+.button-grid > button:hover {
+  -webkit-animation: pulse 2s;
+          animation: pulse 2s;
 }
 
-@-webkit-keyframes button {
+.button-grid > button:active {
+  opacity: 0.2;
+  transform: scale(0.98);
+}
+
+@-webkit-keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0px rgba(186, 182, 182, 0.551);
+    box-shadow: 0 0 0 0px rgba(229, 223, 223, 0.487);
   }
   100% {
     box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
   }
 }
 
-@keyframes button {
+@keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0px rgba(186, 182, 182, 0.551);
+    box-shadow: 0 0 0 0px rgba(229, 223, 223, 0.487);
   }
   100% {
     box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);

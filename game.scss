@@ -25,16 +25,21 @@ body {
     border-radius: 5px;
 }
 
-.button-grid > button:active {
-  animation: pulse 1500ms;
-  opacity: 0.1;
+.button-grid > button:hover {
+    animation: pulse 2s;
 }
 
-@keyframes button {
-  0% {
-    box-shadow: 0 0 0 0px rgba(186, 182, 182, 0.551);
-  }
-  100% {
-    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
-  }
+.button-grid > button:active {
+  
+  opacity: 0.2;
+  transform: scale(0.98);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(229, 223, 223, 0.487);
+    }
+    100% {
+        box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+    }
 }
