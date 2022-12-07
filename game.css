@@ -1,11 +1,30 @@
 body {
-  color: #fff;
-  background: hsl(227deg, 10%, 10%);
+  background: hsl(233deg, 14%, 11%);
   font: 300 1em "Fira Sans", sans-serif;
   justify-content: center;
   align-content: center;
   align-items: center;
   text-align: center;
+}
+
+h1 {
+  color: #fff;
+}
+
+.green {
+  background-color: rgb(175, 252, 200);
+}
+
+.blue {
+  background-color: rgb(151, 248, 243);
+}
+
+.blurple {
+  background-color: rgb(181, 204, 244);
+}
+
+.lilac {
+  background-color: rgb(219, 184, 250);
 }
 
 .button-grid {
@@ -29,11 +48,6 @@ body {
           animation: pulse 2s;
 }
 
-.button-grid > button:active {
-  opacity: 0.2;
-  transform: scale(0.98);
-}
-
 @-webkit-keyframes pulse {
   0% {
     box-shadow: 0 0 0 0px rgba(229, 223, 223, 0.487);
@@ -50,4 +64,13 @@ body {
   100% {
     box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
   }
+}
+.button-grid > button:active {
+  opacity: 0.5;
+  transform: scale(0.98);
+}
+
+.add {
+  -webkit-animation: pulse 2s;
+          animation: pulse 2s;
 }/*# sourceMappingURL=game.css.map */
