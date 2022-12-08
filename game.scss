@@ -1,6 +1,5 @@
 body {
-    
-    background: hsl(233, 14%, 11%);
+    background: hsl(231, 16%, 9%);
     font: 300 1em 'Fira Sans', sans-serif;
     justify-content: center;
     align-content: center;
@@ -11,8 +10,9 @@ body {
 h1 {
     color: #fff;
 }
+
 #mint {
-    background-color: rgb(175, 252, 200);
+    background-color: rgb(157, 248, 186);
 }
 
 #cyan {
@@ -35,7 +35,7 @@ h1 {
     grid-template-columns: repeat(2, 200px);
     grid-template-rows: repeat(2, 200px);
     padding: 5px;
-    min-height: 80vh;
+    min-height: 75vh;
 }
 
 .button-grid > button{
