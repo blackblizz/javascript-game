@@ -1,14 +1,15 @@
 const buttons = document.querySelectorAll("button");
 const h1 = document.querySelector("h1");
 
-// let startGame = true;
+//need startGame to be true to prevent keydown triggering event again during the game
+let startGame = true;
 document.addEventListener("keydown", () => {
-    // if(startGame==true) {
+    if(startGame==true) {
         h1.innerHTML="GO!";
-        // startGame=false;
+        startGame=false;
         setTimeout(generate,1200);
      }
-);
+});
 
 //generate random pattern of colors//
 let correctAnswer = [];
@@ -23,17 +24,30 @@ const generate = () => {
 
     setTimeout(() => {
     document.getElementById(colors[choose]).classList.remove("add");
-    }, 3000);
+    }, 1200);
 };
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         let audio = new Audio("wooden.mp3");
         audio.play();
+        play();
     })
 })
 
-let userClicked = 0;
-const play = () => {
 
+
+let i = 0;
+const play = () => {
+    if(document.activeElement.id == correctAnswer[i]){
+        i++;
+        if(i == correctAnswer.length){
+        h1.innerHTML="well done!"
+        i = 0;  //user has to click from the beginning of the pattern
+        setTimeout(generate, 1500);
+        } 
+    } else {
+        h1.innerHTML="Game Over..Game reloads in 3 seconds";
+        setTimeout(() => {window.location.reload()},3000);
+    }
 }

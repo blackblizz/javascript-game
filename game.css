@@ -20,11 +20,11 @@ h1 {
 }
 
 #blurple {
-  background-color: rgb(181, 204, 244);
+  background-color: rgb(175, 184, 249);
 }
 
 #lilac {
-  background-color: rgb(219, 184, 250);
+  background-color: rgb(213, 174, 248);
 }
 
 .button-grid {
@@ -73,4 +73,72 @@ h1 {
 .add {
   -webkit-animation: pulse 2s;
           animation: pulse 2s;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background: hsl(231deg, 16%, 9%);
+    font: 300 1em "Fira Sans", sans-serif;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  h1 {
+    color: #fff;
+  }
+  #mint {
+    background-color: rgb(157, 248, 186);
+  }
+  #cyan {
+    background-color: rgb(151, 248, 243);
+  }
+  #blurple {
+    background-color: rgb(175, 184, 249);
+  }
+  #lilac {
+    background-color: rgb(213, 174, 248);
+  }
+  .button-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 20vh;
+    grid-template-columns: repeat(2, 35vw);
+    grid-template-rows: repeat(2, 35vw);
+    padding: 5px;
+    min-height: 75vh;
+  }
+  .button-grid > button {
+    margin: 3px;
+    border-radius: 5px;
+  }
+  .button-grid > button:hover {
+    -webkit-animation: pulse 2s;
+            animation: pulse 2s;
+  }
+  @-webkit-keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(229, 223, 223, 0.487);
+    }
+    100% {
+      box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(229, 223, 223, 0.487);
+    }
+    100% {
+      box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+    }
+  }
+  .button-grid > button:active {
+    opacity: 0.5;
+    transform: scale(0.98);
+  }
+  .add {
+    -webkit-animation: pulse 2s;
+            animation: pulse 2s;
+  }
 }/*# sourceMappingURL=game.css.map */
