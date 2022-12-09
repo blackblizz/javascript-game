@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll("button");
 const h1 = document.querySelector("h1");
 
-//need startGame to be true to prevent keydown triggering event again during the game
+//startGame needs to be true to prevent keydown from triggering again in the middle of the game
 let startGame = true;
 document.addEventListener("keydown", () => {
     if(startGame==true) {
@@ -31,7 +31,7 @@ buttons.forEach(button => {
     button.addEventListener("click", () => {
         let audio = new Audio("wooden.mp3");
         audio.play();
-        play();
+        play(); //every time a button is clicked, it will compare the button's color to the correct answer
     })
 })
 
@@ -40,10 +40,9 @@ buttons.forEach(button => {
 let i = 0;
 const play = () => {
     if(document.activeElement.id == correctAnswer[i]){
-        i++;
-        if(i == correctAnswer.length){
-        h1.innerHTML="well done!"
-        i = 0;  //user has to click from the beginning of the pattern
+        i++; //compares the next answer
+        if(i == correctAnswer.length){ //when the number of clicks = the length of correctAnswer array
+        i = 0;  //user has to click from the beginning of the pattern in the next round
         setTimeout(generate, 1500);
         } 
     } else {
